@@ -6,7 +6,7 @@ function App() {
     <>
       <h1>Rick and Morty</h1>
       <main className='container'>
-        <section className='charactersList'>
+        <section>
           <CharactersList />
         </section>
         <aside>last viewed characters </aside>

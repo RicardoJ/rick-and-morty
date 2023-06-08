@@ -11,12 +11,6 @@
   grid-gap: 20px;
 }
 
-.charactersList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
 @media (min-width: 768px) {
   .container {
     grid-template-areas: 'main aside';
