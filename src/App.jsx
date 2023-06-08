@@ -1,23 +1,16 @@
-import { useState } from 'react';
 import './App.css';
+import { CharactersList } from './components/character-list';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Rick and Morty</h1>
+      <main className='container'>
+        <section className='charactersList'>
+          <CharactersList />
+        </section>
+        <aside>last viewed characters </aside>
+      </main>
     </>
   );
 }
