@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react';
 import { fetchCharacters } from '../services/characters';
 
-export function useCharacters() {
+export function useCharacters({ count }) {
   const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState([]);
-  const [page, setPage] = useState(1);
 
   const getCharacters = async () => {
-    const newCharacters = await fetchCharacters();
+    const newCharacters = await fetchCharacters({ count });
     setCharacters(newCharacters);
     setLoading(false);
   };
 
   useEffect(() => {
     getCharacters();
-  }, [page]);
+  }, [count]);
 
   return { characters, loading };
 }
