@@ -1,0 +1,21 @@
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: #97ce4c;
+}
+
+.scroll-to-top-button.visible {
+  opacity: 1;
+}
+
+.scroll-to-top-button.visible:hover {
+  background-color: #98ce4c8d;
+  border: 1px solid #97ce4c;
+}

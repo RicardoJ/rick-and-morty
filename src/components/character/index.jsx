@@ -1,5 +1,5 @@
 import './index.css';
-export function Character({ character }) {
+export default function Character({ character }) {
   return (
     <div className='character'>
       <h3>{character.name}</h3>
