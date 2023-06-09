@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchCharacters } from '../services/characters';
+import { fetchCharacters } from '@services/characters';
 
 export function useCharacters({ count }) {
   const [loading, setLoading] = useState(true);

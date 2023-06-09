@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchCharacter, fetchCharacters } from '../services/characters';
+import { fetchCharacter } from '@services/characters';
 
 export function useCharacter(id) {
   const [character, setCharacter] = useState(null);

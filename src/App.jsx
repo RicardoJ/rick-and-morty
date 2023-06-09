@@ -1,7 +1,7 @@
-import Header from './components/header';
-import Home from './pages/home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CharacterDetail from './pages/character-detail';
+import Header from '@components/header';
+import Home from '@pages/home';
+import CharacterDetail from '@pages/character-detail';
 import './App.css';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/characters/:id' element={<CharacterDetail />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/characters/:id" element={<CharacterDetail />} />
         </Routes>
       </Router>
     </>
