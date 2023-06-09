@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { getItem, setItem } from '../utils/storage';
+import { getItem, setItem } from '@utils/storage';
 import { useNavigate } from 'react-router-dom';
 
 export function useLastViewed() {
   const navigateTo = useNavigate();
   const [lastViewedCharacters, setLastViewedCharacters] = useState(
-    getItem('lastViewedCharacters') || []
+    getItem('lastViewedCharacters') || [],
   );
 
   useEffect(() => {

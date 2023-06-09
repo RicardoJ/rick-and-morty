@@ -1,5 +1,5 @@
-import Filter from '../components/filter';
-import useSearchFilter from '../hooks/useSearchFilter';
+import Filter from '@components/filter';
+import useSearchFilter from '@hooks/useSearchFilter';
 
 const withFilterInput = (WrappedComponent, items, loading) => {
   return (props) => {

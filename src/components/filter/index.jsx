@@ -6,12 +6,12 @@ export default function Filter({
   handleClearFilter,
 }) {
   return (
-    <div className='filter'>
+    <div className="filter">
       <input
-        type='text'
+        type="text"
         value={searchTerm}
         onChange={handleSearch}
-        placeholder='Search'
+        placeholder="Search"
       />
       <button onClick={() => handleClearFilter()}>Clear</button>
     </div>

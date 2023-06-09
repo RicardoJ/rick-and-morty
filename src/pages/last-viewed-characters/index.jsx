@@ -1,4 +1,4 @@
-import { getItem } from '../../utils/storage';
+import { getItem } from '@utils/storage';
 
 function LastViewedCharacters() {
   const storedLastViewedCharacters = getItem('lastViewedCharacters') || [];

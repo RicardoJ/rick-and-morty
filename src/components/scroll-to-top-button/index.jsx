@@ -1,5 +1,5 @@
-import './index.css';
 import { forwardRef } from 'react';
+import './index.css';
 
 const ScrollToTopButton = forwardRef(({ scrollToTop, isVisible }, ref) => {
   return (

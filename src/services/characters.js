@@ -1,8 +1,6 @@
 export const fetchCharacters = async ({ count }) => {
   try {
-    const data = await fetch(
-      `${import.meta.env.VITE_FE_URL_ENDPOINT}?page=${count}`
-    );
+    const data = await fetch(`${import.meta.env.VITE_FE_URL_ENDPOINT}?page=${count}`);
     const { results } = await data.json();
     return results;
   } catch (e) {
@@ -10,11 +8,9 @@ export const fetchCharacters = async ({ count }) => {
   }
 };
 
-export const fetchCharacter = async (id) => {
+export const fetchCharacter = async id => {
   try {
-    const response = await fetch(
-      `${import.meta.env.VITE_FE_URL_ENDPOINT}/${id}`
-    );
+    const response = await fetch(`${import.meta.env.VITE_FE_URL_ENDPOINT}/${id}`);
     const data = await response.json();
     return data;
   } catch (error) {
