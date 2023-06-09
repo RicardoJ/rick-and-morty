@@ -1,5 +1,5 @@
 import './index.css';
-export function Navigation({ page, incrementPage, decrementPage }) {
+export default function Navigation({ page, incrementPage, decrementPage }) {
   return (
     <div className='navigation'>
       <button disabled={page === 1} onClick={() => decrementPage()}>
