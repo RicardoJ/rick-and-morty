@@ -1,0 +1,11 @@
+.filter {
+  display: flex;
+  gap: 8px;
+}
+.filter input {
+  width: 100%;
+}
+
+.filter button {
+  background-color: #97ce4c;
+}
