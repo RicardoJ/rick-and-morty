@@ -1,3 +1,4 @@
+import { useLastViewed } from '../../hooks';
 import Character from '../character';
 import './index.css';
 
@@ -7,6 +8,8 @@ export default function CharactersList({
   searchTerm,
   loading,
 }) {
+  const { handleCharacterClick } = useLastViewed();
+
   return (
     <div className='charactersList'>
       {loading ? (
@@ -15,10 +18,18 @@ export default function CharactersList({
         <>
           {searchTerm === ''
             ? characters.map((character) => (
-                <Character key={character.id} character={character} />
+                <Character
+                  key={character.id}
+                  character={character}
+                  onClick={() => handleCharacterClick(character)}
+                />
               ))
             : filteredCharacters.map((character) => (
-                <Character key={character.id} character={character} />
+                <Character
+                  key={character.id}
+                  character={character}
+                  onClick={() => handleCharacterClick(character)}
+                />
               ))}
         </>
       )}

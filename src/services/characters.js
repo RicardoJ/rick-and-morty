@@ -9,3 +9,15 @@ export const fetchCharacters = async ({ count }) => {
     throw new Error('Error fetch characters');
   }
 };
+
+export const fetchCharacter = async (id) => {
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_FE_URL_ENDPOINT}/${id}`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error get the character:', error);
+  }
+};

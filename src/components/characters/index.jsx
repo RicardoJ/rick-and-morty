@@ -2,7 +2,6 @@ import CharactersList from '../character-list';
 import ScrollToTopButton from '../scroll-to-top-button';
 import { useCharacters, useCounter, useScrollTop } from '../../hooks';
 import Navigation from '../navigation';
-import Filter from '../filter';
 import withFilterInput from '../../hoc/withFilterInput';
 
 export default function Characters() {
