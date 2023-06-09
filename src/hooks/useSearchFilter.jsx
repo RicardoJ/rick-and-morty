@@ -15,7 +15,7 @@ export default function useSearchFilter(items) {
 
   useMemo(() => {
     const filteredItems = items.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()),
     );
     setFilteredItems(filteredItems);
   }, [items, searchTerm]);

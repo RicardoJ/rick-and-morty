@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useCharacter } from '../../hooks/useCharacter';
+import { useCharacter } from '@hooks/useCharacter';
 import './index.css';
 
 function CharacterDetail() {
@@ -11,11 +11,11 @@ function CharacterDetail() {
   }
 
   return (
-    <div className='details'>
-      <div className='card'>
+    <div className="details">
+      <div className="card">
         <h1>{character.name}</h1>
         <img src={character.image} alt={character.name} />
-        <div className='information'>
+        <div className="information">
           <p>Status: {character.status || '-'}</p>
           <p>Specie: {character.species || '-'}</p>
           <p>Type: {character.type || '-'}</p>

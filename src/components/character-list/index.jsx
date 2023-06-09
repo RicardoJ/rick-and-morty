@@ -1,4 +1,4 @@
-import { useLastViewed } from '../../hooks';
+import { useLastViewed } from '@hooks';
 import Character from '../character';
 import './index.css';
 
@@ -11,7 +11,7 @@ export default function CharactersList({
   const { handleCharacterClick } = useLastViewed();
 
   return (
-    <div className='charactersList'>
+    <div className="charactersList">
       {loading ? (
         <div>Loading...</div>
       ) : (
