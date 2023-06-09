@@ -2,11 +2,19 @@ import CharactersList from '../character-list';
 import ScrollToTopButton from '../scroll-to-top-button';
 import { useCharacters, useCounter, useScrollTop } from '../../hooks';
 import Navigation from '../navigation';
+import Filter from '../filter';
+import withFilterInput from '../../hoc/withFilterInput';
 
 export default function Characters() {
   const { count, incrementCount, decrementPage } = useCounter();
   const { loading, characters } = useCharacters({ count });
   const { ref, scrollToTop, isVisible } = useScrollTop();
+  const CharactersListWithInput = withFilterInput(
+    CharactersList,
+    characters,
+    loading
+  );
+
   return (
     <>
       <Navigation
@@ -14,8 +22,7 @@ export default function Characters() {
         incrementPage={incrementCount}
         decrementPage={decrementPage}
       />
-
-      <CharactersList characters={characters} loading={loading} />
+      <CharactersListWithInput />
       <ScrollToTopButton
         ref={ref}
         scrollToTop={scrollToTop}
