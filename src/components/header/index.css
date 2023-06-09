@@ -1,0 +1,9 @@
+.header {
+  cursor: pointer;
+  color: rgb(151, 206, 76);
+}
+
+.header:hover {
+  text-shadow: rgb(151, 206, 76) 0px 10px 80px;
+  color: rgb(151, 206, 76);
+}

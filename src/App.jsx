@@ -1,12 +1,19 @@
 import Header from './components/header';
 import Home from './pages/home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CharacterDetail from './pages/character-detail';
 import './App.css';
 
 function App() {
   return (
     <>
-      <Header />
-      <Home />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/characters/:id' element={<CharacterDetail />} />
+        </Routes>
+      </Router>
     </>
   );
 }
