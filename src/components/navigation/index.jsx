@@ -1,7 +1,7 @@
 import './index.css';
 export default function Navigation({ page, incrementPage, decrementPage }) {
   return (
-    <div className="navigation">
+    <div className="navigation" data-testid="navigation">
       <button disabled={page === 1} onClick={() => decrementPage()}>
         Prev
       </button>

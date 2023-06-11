@@ -17,7 +17,6 @@ img {
 }
 
 .card {
-  width: max-content;
   background-color: #97ce4c;
   border-radius: 8px;
   box-shadow: rgb(151, 206, 76) 0px 30px 90px;
