@@ -6,7 +6,7 @@ export default function Filter({
   handleClearFilter,
 }) {
   return (
-    <div className="filter">
+    <div className="filter" data-testid="filter">
       <input
         type="text"
         value={searchTerm}

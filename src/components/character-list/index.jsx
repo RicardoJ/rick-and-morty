@@ -11,7 +11,7 @@ export default function CharactersList({
   const { handleCharacterClick } = useLastViewed();
 
   return (
-    <div className="charactersList">
+    <div className="charactersList" data-testid="characters-list">
       {loading ? (
         <div>Loading...</div>
       ) : (

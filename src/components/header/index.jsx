@@ -5,7 +5,7 @@ function Header() {
   const navigateTo = useNavigate();
 
   return (
-    <h1 className="header" onClick={() => navigateTo('')}>
+    <h1 className="header" onClick={() => navigateTo('/')}>
       Rick and Morty
     </h1>
   );
